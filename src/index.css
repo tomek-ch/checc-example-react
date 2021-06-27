@@ -1,13 +1,80 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 2em auto;
+  max-width: 350px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+input {
+  padding: 0.5em;
+  border-radius: 5px;
+  background-color: lightgray;
+  border: none;
+  outline: none;
+  transition: all 150ms;
+  font-size: inherit;
+}
+
+input:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+input:focus {
+  box-shadow: 0 0 0 2px dodgerblue;
+}
+
+button {
+  background-color: dodgerblue;
+  padding: 0.5em;
+  border-radius: 5px;
+  color: 5px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: inherit;
+  transition: all 150ms;
+}
+
+button:hover {
+  background-color: rgb(22, 120, 218);
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  margin-left: 1em;
+}
+
+li {
+  color: red;
+  word-wrap: break-word;
+}
+
+.submit-success {
+  color: green;
+}
+
+.submit-fail {
+  color: red;
 }
