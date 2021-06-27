@@ -7,6 +7,7 @@ function App() {
     lastName: "",
     username: "",
     password: "",
+    repeatPassword: "",
   });
 
   const initialErrorsObj = {
@@ -14,6 +15,7 @@ function App() {
     lastName: [],
     username: [],
     password: [],
+    repeatPassword: [],
   };
 
   const [errors, setErrors] = useState(initialErrorsObj);
@@ -37,6 +39,13 @@ function App() {
     password: {
       ...basicInputSchema,
       pattern: [/\d/, "Password must contain a digit"],
+    },
+    repeatPassword: {
+      ...basicInputSchema,
+      custom: (repeatPassword, { data }) =>
+        repeatPassword === data.password
+          ? null
+          : Promise.reject("Passwords must match"),
     },
   };
 
@@ -100,6 +109,20 @@ function App() {
         <ul>
           {errors.password.map((err) => (
             <li key={`password-${err}`}>{err}</li>
+          ))}
+        </ul>
+      </label>
+      <label>
+        Repeat password
+        <input
+          value={data.repeatPassword}
+          onChange={handleChange}
+          name="repeatPassword"
+          type="password"
+        />
+        <ul>
+          {errors.repeatPassword.map((err) => (
+            <li key={`repeatPassword-${err}`}>{err}</li>
           ))}
         </ul>
       </label>
