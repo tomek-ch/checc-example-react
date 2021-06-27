@@ -41,7 +41,6 @@ function App() {
       pattern: [/\d/, "Password must contain a digit"],
     },
     repeatPassword: {
-      ...basicInputSchema,
       custom: (repeatPassword, { data }) =>
         repeatPassword === data.password
           ? null
