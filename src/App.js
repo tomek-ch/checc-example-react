@@ -10,15 +10,13 @@ function App() {
     repeatPassword: "",
   });
 
-  const initialErrorsObj = {
+  const [errors, setErrors] = useState({
     firstName: [],
     lastName: [],
     username: [],
     password: [],
     repeatPassword: [],
-  };
-
-  const [errors, setErrors] = useState(initialErrorsObj);
+  });
   const [submitStatus, setSubmitStatus] = useState("");
 
   const handleChange = ({ target: { name, value } }) => {
@@ -50,15 +48,15 @@ function App() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     const { errors, isValid } = await checc(data, validationSchema, {
       keepSchema: true,
     });
+    setErrors(errors);
 
     if (!isValid) {
-      setErrors(errors);
       setSubmitStatus("Failure...");
     } else {
-      setErrors(initialErrorsObj);
       setSubmitStatus("Success!");
     }
   };
