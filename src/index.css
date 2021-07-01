@@ -66,15 +66,10 @@ ul {
   margin-left: 1em;
 }
 
-li {
-  color: red;
-  word-wrap: break-word;
-}
-
-.submit-success {
+.success {
   color: green;
 }
 
-.submit-fail {
+.error {
   color: red;
 }
