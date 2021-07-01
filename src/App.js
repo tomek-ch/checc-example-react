@@ -69,7 +69,7 @@ function App() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h1>Checc-js demo</h1>
+      <h1>Checc.js demo</h1>
       <label>
         First name
         <input
