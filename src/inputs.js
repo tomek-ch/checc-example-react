@@ -3,6 +3,7 @@ const inputs = [
     name: "firstName",
     label: "First name",
     type: "text",
+    autoFocus: true,
   },
   {
     name: "lastName",
