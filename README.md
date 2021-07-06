@@ -6,6 +6,8 @@ Demo form validation with [checc.js](https://github.com/tomek-ch/checc.js) in Re
 
 ## Error handling
 
+Validation is done on form submit. The `isValid` property is used for checking if there were any errors. Then the messages from the `errors` property are displayed.
+
 ```
 // src/App.js
 
@@ -26,6 +28,8 @@ const handleSubmit = async (e) => {
 ```
 
 ## Validation schema
+
+A `basicInputSchema` object is used for basic text validation. The pattern gets overriden for `username` and `password`. A custom validator is used for checking whether the passwords match.
 
 ```
 // src/validationSchema.js
