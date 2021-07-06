@@ -58,3 +58,14 @@ const validationSchema = {
   },
 };
 ```
+
+## Run it locally
+
+You can install and run the example locally by doing:
+
+```
+git clone https://github.com/tomek-ch/checc-example-react
+cd checc-example-react
+yarn install
+yarn start
+```
