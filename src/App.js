@@ -12,7 +12,7 @@ function App() {
   const [errors, setErrors] = useState(getObj([]));
   const [submitStatus, setSubmitStatus] = useState("");
 
-  const handleChange = ({ target: { name, value } }) => {
+  const onChange = ({ target: { name, value } }) => {
     setData((prev) => ({ ...prev, [name]: value }));
     setSubmitStatus("");
   };
@@ -39,7 +39,7 @@ function App() {
         <Input
           key={input.name}
           {...input}
-          handleChange={handleChange}
+          onChange={onChange}
           errors={errors[input.name]}
           value={data[input.name]}
         />

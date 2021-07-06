@@ -1,17 +1,11 @@
-function Input({ name, label, type, handleChange, errors, value, autoFocus }) {
+function Input({ label, errors, ...props }) {
   return (
     <label>
       {label}
-      <input
-        value={value}
-        onChange={handleChange}
-        name={name}
-        type={type}
-        autoFocus={autoFocus}
-      />
+      <input {...props} />
       <ul>
         {errors.map((err) => (
-          <li className="error" key={`${name}-${err}`}>
+          <li className="error" key={`${props.name}-${err}`}>
             {err}
           </li>
         ))}
