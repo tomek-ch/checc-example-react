@@ -29,7 +29,7 @@ const handleSubmit = async (e) => {
 
 ## Validation schema
 
-A `basicInputSchema` object is used for basic text validation. The pattern gets overriden for `username` and `password`. A custom validator is used for checking whether the passwords match.
+A `basicInputSchema` object is used for basic text validation. The pattern gets overridden for `username` and `password`. A custom validator is used for checking whether the passwords match.
 
 ```
 // src/validationSchema.js
